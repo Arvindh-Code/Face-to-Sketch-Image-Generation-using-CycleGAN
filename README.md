@@ -15,7 +15,6 @@ In the realm of computer vision, image-to-image translation has gained attention
 
 The dataset combines the CUHK Face Sketch Database (CUFS) and the CUSK Dataset. CUFS includes 188 faces from the Chinese University of Hong Kong and others. The CUSK Dataset contributes 5000+ pairs, enhancing model accuracy. The dataset's uniformity, neutral expressions, and proper lighting facilitate high-quality sketch generation.
 
-![Sample Face Photo and Corresponding Sketch](images/sample_face_sketch.png)
 
 ## Project Description
 
@@ -23,27 +22,22 @@ The dataset combines the CUHK Face Sketch Database (CUFS) and the CUSK Dataset. 
 
 The project implements a CycleGAN model for transforming facial photographs into expressive sketches. GANs, with a generator and discriminator, are trained competitively. CycleGAN, designed for unpaired data, introduces cycle-consistency loss for reversible translation. The model is trained on CUFS and CUSK datasets using adversarial, cycle-consistency, and identity loss functions.
 
-![Training of CycleGAN](images/training_cyclegan.png)
 
 ### References
 
 1. **Identity-Aware CycleGAN**: Introduces Identity-Aware Cycle GAN for face photo-sketch synthesis and recognition. Incorporates feedback training, various loss functions, and fine-tuning for identity preservation.
-   ![Framework of Identity-Aware CycleGAN](images/iacyclegan_framework.png)
 
 2. **Semi-supervised Cycle-GAN**: Proposes a semi-supervised learning framework for face photo-sketch translation. Introduces a pseudo-sketch feature and self-supervised training for improved generalization.
-   ![Illustration from Source](images/semi_cyclegan_source.png)
 
 ### Difference in Approach
 
 The project differs by exclusively using upsampling/downsampling layers for image translation. The references focus on Identity-Aware paired data translation and semi-supervised learning. Due to limited face-sketch data, extensive preprocessing and optimized hyperparameters were crucial.
 
-![Samples of Preprocessed Sketches](images/preprocessed_samples.png)
 
 ### Performance Comparison
 
 The project optimizes epochs and hyperparameters, achieving improved face-sketch generation results (80% matching). Adversarial and cycle-consistency losses decrease, indicating enhanced translation quality. The model excels in capturing diverse artistic styles from photographs.
 
-![Loss Value Comparison](images/loss_comparison.png)
 
 ## Analysis
 
